@@ -4001,20 +4001,20 @@ img.u-pull-left {
 /* ------------------------------------------------------------------- 
  * ## glightbox overrides
  * ------------------------------------------------------------------- */
-.glightbox-container a {
-    font-weight: 500 !important;
-    color: var(--color-1);
+ .glightbox-container a {
+    font-weight  : 500 !important;
+    color        : var(--color-1);
     border-bottom: 1px dotted var(--color-1);
 }
 
 .glightbox-container .gslide-inner-content {
-    width: min(100%, 1050px);
+    width      : min(100%, 1050px);
     padding-top: 10vh;
 }
 
 .glightbox-container .gslide-description {
     background: rgb(0, 0, 0);
-    width: 100%;
+    width     : 100%;
     text-align: center;
 }
 
@@ -4024,31 +4024,31 @@ img.u-pull-left {
 
 .glightbox-container .gslide-title,
 .glightbox-container .gslide-desc {
-    width: min(100%, 600px);
+    width : min(100%, 600px);
     margin: 0 auto;
 }
 
 .glightbox-container .gslide-title {
-    font-family: var(--font-1);
-    font-weight: 400;
-    font-size: 1.7rem !important;
-    color: white;
-    margin-top: 0;
+    font-family  : var(--font-1);
+    font-weight  : 400;
+    font-size    : 1.7rem !important;
+    color        : white;
+    margin-top   : 0;
     margin-bottom: var(--vspace-0_375);
 }
 
 .glightbox-container .gslide-desc {
     font-family: var(--font-1);
     font-weight: 300;
-    font-size: 1.4rem;
+    font-size  : 1.4rem;
     line-height: 1.571;
-    color: rgba(255, 255, 255, 0.5) !important;
+    color      : rgba(255, 255, 255, 0.5) !important;
 }
 
 .glightbox-container .gprev,
 .glightbox-container .gnext,
 .glightbox-container .gclose {
-    margin: 0;
+    margin : 0;
     padding: 0;
 }
 
@@ -4073,91 +4073,6 @@ img.u-pull-left {
 
 .glightbox-mobile .glightbox-container .gslide-desc .desc-more {
     opacity: 1;
-}
-
-/* ------------------------------------------------------------------- 
- * ## modal popup
- * ------------------------------------------------------------------- */
-.modal-popup {
-    max-width: 680px;
-    background-color: white;
-    font-size: calc(var(--text-size) * 0.9447);
-    line-height: var(--vspace-0_875);
-    color: rgba(0, 0, 0, 0.75);
-    overflow-y: auto;
-    position: relative;
-}
-
-.modal-popup img {
-    margin-bottom: var(--vspace-0_75);
-}
-
-.modal-popup h5 {
-    font-family: var(--font-1);
-    font-size: var(--text-size);
-    line-height: var(--vspace-1);
-    font-weight: 500;
-    margin-top: 0;
-    margin-bottom: var(--vspace-0_25);
-    color: black;
-}
-
-.modal-popup__desc {
-    padding: 0 var(--vspace-1_25) var(--vspace-0_25);
-}
-
-.modal-popup__cat {
-    list-style: none;
-    margin-left: 0;
-    font-size: var(--text-sm);
-    line-height: var(--vspace-0_5);
-    color: rgba(0, 0, 0, 0.6);
-    padding-left: calc(0.875 * var(--space));
-    position: relative;
-}
-
-.modal-popup__cat::before {
-    content: "";
-    display: block;
-    height: calc(0.625 * var(--space));
-    width: calc(0.625 * var(--space));
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-image: url(../images/icons/icon-tag.svg);
-    position: absolute;
-    left: 0;
-    top: -0.15em;
-}
-
-.modal-popup__cat li {
-    display: inline;
-    padding-left: 0;
-}
-
-.modal-popup__cat li::after {
-    content: ", ";
-}
-
-.modal-popup__cat li:last-child::after {
-    display: none;
-}
-
-.modal-popup__details {
-    background-color: rgba(0, 0, 0, 0.3);
-    font-size: var(--text-xs);
-    line-height: var(--vspace-1_25);
-    color: white;
-    padding: 0 1.2rem;
-    position: absolute;
-    top: var(--vspace-1);
-    left: var(--vspace-1);
-}
-
-.modal-popup__details:focus,
-.modal-popup__details:hover {
-    background-color: var(--color-body);
-    color: white;
 }
 
 /* ------------------------------------------------------------------- 
@@ -4267,6 +4182,15 @@ img.u-pull-left {
 }
 
 @media screen and (max-width: 1000px) {
+    .folio-entries .entry {
+        flex: none;
+        width: 50%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+    }
+
     .folio-list__item-title {
         font-size: var(--text-lg);
         line-height: var(--vspace-1);
@@ -4584,7 +4508,7 @@ img.u-pull-left {
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: hidden !important;
     position: relative;
 }
 
@@ -4695,8 +4619,14 @@ img.u-pull-left {
 
 @media screen and (max-width: 400px) {
     .gallery {
-        column-count: 1;
-        --webkit-column-count: 1;
-        --moz-column-count: 1;
+        column-count: 2;
+        --webkit-column-count: 2;
+        --moz-column-count: 2;
     }
+}
+
+/* ownership desc */
+.ownership-desc {
+    font-size: var(--base-font-size);
+    margin-top: 2rem;
 }
